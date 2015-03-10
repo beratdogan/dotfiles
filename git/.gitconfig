@@ -1,4 +1,5 @@
 [alias]
+    addws = diff -w --no-color | git apply --cached --ignore-whitespace
     b = branch
     ci = commit
     co = checkout
