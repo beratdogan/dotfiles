@@ -1,10 +1,17 @@
 [alias]
-	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
-	st = status
+    b = branch
+    ci = commit
 	co = checkout
-	rbm = pull --rebase upstream master
-	rbn = pull --rabase upstream next
-	pm = push master
+    cob = checkout -b
+    d = diff
+    l = log
+    lgi = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+    lga = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative --branches
+    st = status
+    fixup = !sh -c 'git commit -a -m \"fixup! $(git log -1 --format='%s' $@)\"' -
+    squash = !sh -c 'git commit -a -m \"squash! $(git log -1 --format='%s' $@)\"' -
+    ri = rebase --interactive
+    rc = rebase --continue
 	rsth = git reset --hard
 	rsts = git reset --soft HEAD^
 	sqh = git rebase -i HEAD~
