@@ -1,0 +1,27 @@
+[alias]
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+	st = status
+	co = checkout
+	rbm = pull --rebase upstream master
+	rbn = pull --rabase upstream next
+	pm = push master
+	rsth = git reset --hard
+	rsts = git reset --soft HEAD^
+	sqh = git rebase -i HEAD~
+	rmf = git rm --cached -r
+[color]
+	diff = true
+	ui = true
+[user]
+	email = beratdgan@gmail.com
+	name = Berat Dogan
+[core]
+	autocrlf = false
+	excludesfile = .gitignore_global
+	editor = vim
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
