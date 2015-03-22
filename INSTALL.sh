@@ -3,13 +3,6 @@
 # Hi girl. Here is my dotfiles installer.
 # This file allows you to install or update my environment files with one-click.
 
-#update
-
-install_git
-install_zsh
-
-make_links
-
 update () {
     echo "Getting up-to-date version from origin"
     git pull origin master
@@ -38,3 +31,10 @@ make_links() {
         fi
     done
 }
+
+#update
+
+install_git
+install_zsh
+
+make_links
