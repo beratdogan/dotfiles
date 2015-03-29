@@ -88,9 +88,6 @@ alias vi="vim"
 alias c="clear"
 alias phplintall="find -L . -name '*.php' -print0 | xargs -0 -n 1 -P 4 php -l"
 
-source virtualenvwrapper.sh
-source virtualenvwrapper_lazy.sh
-
 # Update PATH for Composer's global required packages
 #export PATH="$PATH:$HOME/.composer/vendor/bin"
 ### Added by the Heroku Toolbelt
@@ -101,4 +98,21 @@ export EDITOR='vim'
 source $HOME/google-cloud-sdk/path.zsh.inc
 source $HOME/google-cloud-sdk/completion.zsh.inc
 
-source ~/.bin/tmuxinator.zsh
+#source /usr/bin/tmuxinator.zsh
+
+
+# Before other PATHs...
+PATH=${PATH}:/usr/local/share/python
+
+# Python
+export WORKON_HOME=$HOME/.virtualenvs
+export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python2.7
+export VIRTUALENVWRAPPER_VIRTUALENV_ARGS='--no-site-packages'
+export PIP_VIRTUALENV_BASE=$WORKON_HOME
+export PIP_RESPECT_VIRTUALENV=true
+if [[ -r /usr/local/bin/virtualenvwrapper.sh ]]; then
+    source /usr/local/bin/virtualenvwrapper.sh
+else
+    echo "WARNING: Can't find virtualenvwrapper.sh"
+fi
+export PATH="/usr/local/sbin:$PATH"
