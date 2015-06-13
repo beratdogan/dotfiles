@@ -28,14 +28,13 @@ NeoBundle 'terryma/vim-multiple-cursors'
 
 " Multi-language DBGP debugger client for Vim (PHP, Python, Perl, Ruby, etc.)
 " https://github.com/joonty/vdebug
-NeoBundle 'joonty/vdebug'
+" NeoBundle 'joonty/vdebug'
 
 " A tree explorer plugin for vim.
 " https://github.com/scrooloose/nerdtree
 NeoBundle 'scrooloose/nerdtree'
 
 NeoBundle 'bling/vim-airline'
-NeoBundle 'altercation/vim-colors-solarized'
 
 NeoBundle 'Shougo/neocomplcache'
 
@@ -53,8 +52,6 @@ NeoBundleCheck
 
 " syntax enable – Already set by sensible
 set background=dark
-colorscheme solarized
-
 
 set smartindent
 set tabstop=4
