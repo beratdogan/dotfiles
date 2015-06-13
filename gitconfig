@@ -4,6 +4,7 @@
     ci = commit
     co = checkout
     cob = checkout -b
+    contributors = shortlog -s -n
     d = diff
     dc = diff --cached
     l = log
