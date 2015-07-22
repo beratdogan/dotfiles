@@ -88,6 +88,12 @@ alias vi="vim"
 alias c="clear"
 alias phplintall="find -L . -name '*.php' -print0 | xargs -0 -n 1 -P 4 php -l"
 
+# Docker aliases
+alias d='docker'
+alias dc='docker-compose'
+alias dm='docker-machine'
+alias drmall='docker rm -f $(docker ps -aq)'
+
 # Update PATH for Composer's global required packages
 #export PATH="$PATH:$HOME/.composer/vendor/bin"
 ### Added by the Heroku Toolbelt
