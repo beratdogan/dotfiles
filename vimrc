@@ -41,6 +41,8 @@ NeoBundle 'Shougo/neocomplcache'
 NeoBundle 'Shougo/neosnippet'
 NeoBundle 'Shougo/neosnippet-snippets'
 
+NeoBundle 'trusktr/seti.vim'
+
 call neobundle#end()
 
 " Required:
