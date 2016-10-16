@@ -1,7 +1,8 @@
 [alias]
     addws = diff -w --no-color | git apply --cached --ignore-whitespace
     b = branch
-    ci = commit
+    c = commit
+    ca = commit -a
     co = checkout
     cob = checkout -b
     contributors = shortlog -s -n
@@ -17,6 +18,7 @@
     rc = rebase --continue
     rsth = git reset --hard
     rsts = git reset --soft HEAD^
+    s = show
     sqh = git rebase -i HEAD~
     rmf = git rm --cached -r
 [color]
