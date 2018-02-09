@@ -3,54 +3,8 @@
 " Make vim incompatbile to vi.
 set nocompatible
 
-" Note: Skip initialization for vim-tiny or vim-small.
-if !1 | finish | endif
-
-if has('vim_starting')
-  set nocompatible
-
-  " Required:
-  set runtimepath+=~/.vim/bundle/neobundle.vim/
-endif
-
-call neobundle#begin(expand('~/.vim/bundle/'))
-
-" Let NeoBundle manage NeoBundle
-NeoBundleFetch 'Shougo/neobundle.vim'
-
-" My Bundles here:
-
-NeoBundle 'tpope/vim-sensible'
-
-" Sublime Text style multiple selections for Vim
-" https://github.com/terryma/vim-multiple-cursors
-NeoBundle 'terryma/vim-multiple-cursors'
-
-" Multi-language DBGP debugger client for Vim (PHP, Python, Perl, Ruby, etc.)
-" https://github.com/joonty/vdebug
-" NeoBundle 'joonty/vdebug'
-
-" A tree explorer plugin for vim.
-" https://github.com/scrooloose/nerdtree
-NeoBundle 'scrooloose/nerdtree'
-
-NeoBundle 'bling/vim-airline'
-
-NeoBundle 'Shougo/neocomplcache'
-
-NeoBundle 'Shougo/neosnippet'
-NeoBundle 'Shougo/neosnippet-snippets'
-
-NeoBundle 'trusktr/seti.vim'
-
-call neobundle#end()
-
 " Required:
 filetype plugin indent on
-
-" If there are uninstalled bundles found on startup,
-" this will conveniently prompt you to install them.
-NeoBundleCheck
 
 " syntax enable – Already set by sensible
 set background=dark
@@ -82,16 +36,15 @@ if has('conceal')
 endif
 
 set cursorline
+syntax on
 
 " set markdown syntax highlighting for md files
 au BufRead,BufNewFile *.md set filetype=markdown
 " set column color for py files at 79
 au BufRead,BufNewFile *.py set colorcolumn=79
 
-let g:airline#extensions#tabline#enabled = 1
-"let g:airline_theme = 'solarized'
 
-" set backspace=indent,eol,start – Already set by sensible
+set backspace=indent,eol,start
 
 
 inoremap jj <ESC>
