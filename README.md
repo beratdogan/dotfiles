@@ -1,4 +1,5 @@
 # dotfiles
+![Sample Preview](preview.png?raw=true "Title")
 
 ```shell
 git clone git@github.com:beratdogan/dotfiles.git
