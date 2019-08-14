@@ -84,8 +84,6 @@ fi
 #    EXPORTS
 # =============
 export PATH="/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin"
-export PATH="$HOME/.composer/vendor/bin:$PATH"  # getcomposer.org
-source $HOME/.cargo/env  # Rust's cargo package manager
 export GOPATH="$HOME/Code/go"
 
 
@@ -96,11 +94,6 @@ alias vi="vim"
 alias c="clear"
 alias ll="ls -al"
 alias phplintall="find -L . -name '*.php' -print0 | xargs -0 -n 1 -P 4 php -l"
-
-# Python virtualenvwrapper integration
-export WORKON_HOME=$HOME/.virtualenvs
-export PROJECT_HOME=$HOME/Code
-source /usr/local/bin/virtualenvwrapper.sh
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/beratdogan/google-cloud-sdk/path.zsh.inc' ]; then source '/Users/beratdogan/google-cloud-sdk/path.zsh.inc'; fi
