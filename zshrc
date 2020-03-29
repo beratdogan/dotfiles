@@ -84,6 +84,7 @@ fi
 #    EXPORTS
 # =============
 export PATH="/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin"
+export PATH="/Applications/Postgres.app/Contents/Versions/11/bin/:$PATH"
 export GOPATH="$HOME/Code/go"
 
 
@@ -95,8 +96,9 @@ alias c="clear"
 alias ll="ls -al"
 alias phplintall="find -L . -name '*.php' -print0 | xargs -0 -n 1 -P 4 php -l"
 
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/beratdogan/google-cloud-sdk/path.zsh.inc' ]; then source '/Users/beratdogan/google-cloud-sdk/path.zsh.inc'; fi
 
-# The next line enables shell command completion for gcloud.
-if [ -f '/Users/beratdogan/google-cloud-sdk/completion.zsh.inc' ]; then source '/Users/beratdogan/google-cloud-sdk/completion.zsh.inc'; fi
+# =========
+#    GCP
+# =========
+if [ -f '$HOME/google-cloud-sdk/path.zsh.inc' ]; then . '$HOME/google-cloud-sdk/path.zsh.inc'; fi
+if [ -f '$HOME/google-cloud-sdk/completion.zsh.inc' ]; then . '$HOME/google-cloud-sdk/completion.zsh.inc'; fi
