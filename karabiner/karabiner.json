@@ -194,7 +194,6 @@
                         "manipulators": [
                             {
                                 "description": "Map CapsLock to Ctrl if pressed with other keys, to Enter if pressed alone",
-                                "type": "basic",
                                 "from": {
                                     "key_code": "caps_lock",
                                     "modifiers": {
@@ -212,7 +211,8 @@
                                     {
                                         "key_code": "return_or_enter"
                                     }
-                                ]
+                                ],
+                                "type": "basic"
                             }
                         ]
                     },
@@ -220,7 +220,6 @@
                         "manipulators": [
                             {
                                 "description": "Map LShift to Enter if pressed alone",
-                                "type": "basic",
                                 "from": {
                                     "key_code": "left_shift",
                                     "modifiers": {
@@ -238,7 +237,8 @@
                                     {
                                         "key_code": "return_or_enter"
                                     }
-                                ]
+                                ],
+                                "type": "basic"
                             }
                         ]
                     }
@@ -348,7 +348,24 @@
                 "delay_milliseconds_before_open_device": 1000
             },
             "selected": true,
-            "simple_modifications": [],
+            "simple_modifications": [
+                {
+                    "from": {
+                        "key_code": "non_us_backslash"
+                    },
+                    "to": {
+                        "key_code": "return_or_enter"
+                    }
+                },
+                {
+                    "from": {
+                        "key_code": "return_or_enter"
+                    },
+                    "to": {
+                        "key_code": "tab"
+                    }
+                }
+            ],
             "virtual_hid_keyboard": {
                 "country_code": 0,
                 "mouse_key_xy_scale": 100
