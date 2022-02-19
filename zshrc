@@ -83,9 +83,15 @@ fi
 # =============
 #    EXPORTS
 # =============
-export PATH="/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin"
+# export PATH="/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin"
 export PATH="/Applications/Postgres.app/Contents/Versions/11/bin/:$PATH"
 export GOPATH="$HOME/Code/go"
+
+
+# =============
+#    PYTHON
+# =============
+eval "$(pyenv init -)"
 
 
 # =============
